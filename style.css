@@ -1,0 +1,450 @@
+/* ================= GENERAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffdf5;
+    color: #333;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    margin: 15px auto 0;
+    max-width: 1200px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #159bd7,
+        #4169e1,
+        #7655d9
+    );
+
+    border-radius: 8px 8px 0 0;
+
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.moving-text {
+    margin-top: 6px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    background-color: #fffaf0;
+
+    border-bottom: 1px solid #e5dfcf;
+}
+
+nav a {
+    padding: 14px 35px;
+
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #168ed0;
+
+    border-bottom: 3px solid #168ed0;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 22px 25px;
+
+    background-color: #fffdf5;
+
+    border-bottom: 1px solid #eee5d2;
+}
+
+section h2 {
+    margin: 0 0 18px;
+
+    color: #333;
+
+    font-size: 22px;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.cards {
+    display: flex;
+
+    gap: 18px;
+}
+
+.card {
+    flex: 1;
+
+    padding: 18px;
+
+    min-height: 115px;
+
+    background-color: #fffaf0;
+
+    border-radius: 8px;
+
+    border: 1px solid #eee5d2;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin: 8px 0;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+.card p {
+    margin: 0;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* Different dashboard colors */
+
+.card:nth-child(1) p {
+    color: #168ed0;
+}
+
+.card:nth-child(2) p {
+    color: #3aa65c;
+}
+
+.card:nth-child(3) p {
+    color: #e86d4c;
+}
+
+.card:nth-child(4) p {
+    color: #7655d9;
+}
+
+
+/* ================= MEDICINE INPUT ================= */
+
+input {
+    padding: 11px 14px;
+
+    margin: 5px;
+
+    width: 23%;
+
+    background-color: #fffef9;
+
+    border: 1px solid #ddd5c5;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    color: #333;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #168ed0;
+}
+
+
+/* ================= BUTTONS ================= */
+
+button {
+    padding: 10px 18px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #168ed0;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0c79b8;
+}
+
+button:disabled {
+    background-color: #999;
+
+    cursor: not-allowed;
+}
+
+
+/* ================= MEDICINE LIST ================= */
+
+#medicineList {
+    margin-top: 15px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ================= MEDICINE CARD ================= */
+
+.medicine-card {
+    position: relative;
+
+    padding: 16px 18px;
+
+    background-color: #fffaf0;
+
+    border: 1px solid #e5dfcf;
+
+    border-left: 5px solid #168ed0;
+
+    border-radius: 6px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.medicine-card h3 {
+    margin: 0 0 10px;
+
+    color: #333;
+
+    font-size: 15px;
+}
+
+.medicine-card p {
+    margin: 6px 0;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+    color: #f08b32;
+
+    font-weight: bold;
+}
+
+
+/* ================= MEDICINE BUTTONS ================= */
+
+.medicine-card button {
+    margin-top: 8px;
+}
+
+.medicine-card button:first-of-type {
+    background-color: #3ba45b;
+}
+
+.medicine-card button:first-of-type:hover {
+    background-color: #2d8b49;
+}
+
+
+/* Delete button */
+
+.delete {
+    background-color: #e86d4c;
+}
+
+.delete:hover {
+    background-color: #d95838;
+}
+
+
+/* ================= REMINDER ================= */
+
+.reminder {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px;
+
+    background-color: #fffaf0;
+
+    border-left: 5px solid #f0a33a;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.reminder h3 {
+    margin: 0 0 8px;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+.reminder p {
+    margin: 5px 0;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+.reminder button {
+    background-color: #168ed0;
+}
+
+
+/* ================= HISTORY ================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: #fffaf0;
+
+    border: 1px solid #e2dac8;
+}
+
+th {
+    padding: 9px;
+
+    background: linear-gradient(
+        90deg,
+        #168ed0,
+        #4169e1
+    );
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 12px;
+}
+
+td {
+    padding: 9px;
+
+    border-bottom: 1px solid #e8e0cf;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+tr:hover {
+    background-color: #fff4d8;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #159bd7,
+        #4169e1,
+        #7655d9
+    );
+
+    color: white;
+
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav

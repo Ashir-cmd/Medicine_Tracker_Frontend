@@ -447,4 +447,85 @@ footer p {
         flex-direction: column;
     }
 
-    nav
+    /* Mobile */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    /* Dashboard */
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .dashboard-card {
+        padding: 15px;
+    }
+
+    /* Medicines */
+    .medicines-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Add medicine form */
+    .medicine-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .medicine-form input,
+    .medicine-form select,
+    .medicine-form button {
+        width: 100%;
+        min-height: 42px;
+    }
+
+    /* Reminder */
+    .reminder {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .reminder button {
+        width: 100%;
+    }
+
+    /* History table */
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+}
+}

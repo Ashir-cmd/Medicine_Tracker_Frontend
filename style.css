@@ -439,93 +439,164 @@ footer p {
 
 @media (max-width: 700px) {
 
-    header h1 {
-        font-size: 24px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    /* Mobile */
-@media (max-width: 768px) {
-
-    body {
-        font-size: 15px;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
     /* Header */
+
+    header {
+        margin-top: 0;
+        padding: 18px 10px;
+    }
+
     header h1 {
         font-size: 24px;
     }
 
-    header p {
+    .moving-text {
         font-size: 12px;
     }
 
+
     /* Navigation */
-    nav ul {
-        flex-wrap: wrap;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    nav li {
-        padding: 10px 8px;
-        font-size: 13px;
+    nav a {
+        padding: 12px 8px;
+        font-size: 11px;
     }
+
+
+    /* Sections */
+
+    section {
+        padding: 18px 15px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
 
     /* Dashboard */
-    .dashboard-cards {
+
+    .cards {
+        display: grid;
+
         grid-template-columns: repeat(2, 1fr);
+
         gap: 10px;
     }
 
-    .dashboard-card {
-        padding: 15px;
+    .card {
+        min-width: 0;
+
+        padding: 14px;
+
+        min-height: 100px;
     }
 
-    /* Medicines */
-    .medicines-container {
-        grid-template-columns: 1fr;
+    .card h3 {
+        font-size: 11px;
     }
 
-    /* Add medicine form */
-    .medicine-form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .card p {
+        font-size: 22px;
     }
 
-    .medicine-form input,
-    .medicine-form select,
-    .medicine-form button {
+
+    /* Medicine inputs */
+
+    input {
         width: 100%;
-        min-height: 42px;
+
+        margin: 5px 0;
     }
+
+
+    /* Add Medicine button */
+
+    #medicines > button {
+        width: 100%;
+
+        margin: 5px 0;
+    }
+
+
+    /* Medicine cards */
+
+    #medicineList {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .medicine-card {
+        padding: 13px 10px;
+    }
+
+    .medicine-card h3 {
+        font-size: 14px;
+    }
+
+    .medicine-card p {
+        font-size: 10px;
+    }
+
+
+    /* Medicine buttons */
+
+    .medicine-card button {
+        font-size: 10px;
+
+        padding: 8px 5px;
+
+        margin: 3px 0;
+    }
+
 
     /* Reminder */
+
     .reminder {
         display: flex;
-        flex-direction: column;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
         gap: 10px;
     }
 
     .reminder button {
-        width: 100%;
+        width: auto;
+
+        white-space: nowrap;
     }
 
-    /* History table */
+
+    /* History */
+
     table {
         width: 100%;
-        font-size: 12px;
+
+        font-size: 11px;
     }
 
     th,
     td {
         padding: 8px 5px;
     }
-}
+
+
+    /* Footer */
+
+    footer {
+        padding: 10px;
+    }
 }
